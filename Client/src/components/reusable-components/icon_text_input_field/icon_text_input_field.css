@@ -1,0 +1,41 @@
+input {
+  padding-left: 40px; /* make the same as width of icon */
+  width: 100%;
+  border-radius: 1rem;
+  border: 2px solid rgb(131, 131, 131);
+  color: rgb(131, 131, 131);
+}
+
+input:hover {
+  border: 2px solid rgb(85, 85, 85);
+  color: rgb(131, 131, 131);
+}
+
+input:focus {
+  border: 2px solid rgb(26, 115, 232);
+  color: rgb(131, 131, 131);
+  outline: none;
+}
+
+.wrap {
+  display: flex;
+  position: relative;
+  height: 50px;
+  margin: auto;
+}
+
+.icon-wrap {
+  position: absolute;
+  height: 100%;
+  width: 40px; /* make the same as padding of input */
+  font: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
