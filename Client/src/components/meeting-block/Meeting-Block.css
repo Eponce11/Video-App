@@ -6,22 +6,27 @@
 
 section {
   background-color: rgb(255, 255, 255);
-  width: 1000px;
+  width: 520.859px;
+  height: 319px;
+  background-color: rgb(238, 224, 224);
   color: black;
   font-family: sans-serif;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: start;
-  column-gap: 5%;
-  align-items: center;
 }
 h2 {
-  color: rgb(31, 31, 31);
+  font-size: 2.8125rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 3.25rem;
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
   grid-column: 1/-1;
 }
 
 h3 {
-  color: rgb(131, 131, 131);
+  font-size: 1.375rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.75rem;
+  color: #626564;
   grid-column: 1/-1;
 }
 p {
@@ -32,12 +37,14 @@ p {
   margin-top: 40px;
 }
 
-button {
-  background-color: rgb(26, 115, 232);
+.Meeting-block__buttons {
+  display: flex;
+  gap: 1rem;
 }
 
-input {
-  background-color: rgb(255, 255, 255);
+button {
+  background-color: rgb(26, 115, 232);
+  display: flex;
 }
 
 .learn-more {

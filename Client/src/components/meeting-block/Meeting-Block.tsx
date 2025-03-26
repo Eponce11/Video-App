@@ -1,6 +1,7 @@
 import "./Meeting-Block.css";
-
-import { IconInput } from "../reusable-components/icon_text_input_field/icon_text_input_field";
+import { FaRegKeyboard } from "react-icons/fa6";
+import { MdOutlineVideoCameraFront } from "react-icons/md";
+import { IconInput } from "../reusable-components/icon-input/icon-input";
 import { IconButton } from "../reusable-components/icon-button/Icon-Button";
 
 // for keyboard Icon in icon input
@@ -8,22 +9,32 @@ import { IconButton } from "../reusable-components/icon-button/Icon-Button";
 const Meeting_Block = () => {
   return (
     <section>
-      <h2>Join Calls With Whoever</h2>
+      <h2>Video calls and meetings for everyone</h2>
 
-      <h3>Join Calls for: Overwatch, Marvel Rivals, Or even Rust !</h3>
+      <h3>
+        Connect, collaborate, and celebrate from anywhere with Google Meet
+      </h3>
+      <div className="Meeting-block__buttons">
+        <IconButton
+          icon={<MdOutlineVideoCameraFront size={"20px"} />}
+          text={"New Meeting"}
+        />
 
-      <IconButton
-        icon={<span className="material-symbols-outlined">video_call</span>}
-        text={"New Meet"}
-      />
+        <IconInput
+          children={
+            <FaRegKeyboard
+              size={"20px"}
+              strokeWidth={10}
+              color="rgb(85, 85, 85)"
+            />
+          }
+          placeHolder={"Enter a Code Or Link"}
+          type={"text"}
+        />
 
-      <IconInput
-        children={<span className="keyboard-icon">keyboard</span>}
-        placeHolder={"Enter a Code Or Link"}
-        type={"text"}
-      />
+        <button>Join</button>
+      </div>
 
-      <button>Join</button>
       <p>
         <a
           href="https://support.google.com/meet/?hl=en#topic=14074839"

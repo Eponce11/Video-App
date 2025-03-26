@@ -8,11 +8,9 @@ interface ButtonProps {
 export function IconButton(props: ButtonProps) {
   const { icon, text } = props;
   return (
-    <div className="wrap">
-      <button>
-        {icon}
-        {text}
-      </button>
-    </div>
+    <button className="icon-button__wrap">
+      {icon}
+      <div className="icon-button__text">{text}</div>
+    </button>
   );
 }
