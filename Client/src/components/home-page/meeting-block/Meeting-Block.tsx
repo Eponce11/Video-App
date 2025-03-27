@@ -1,8 +1,9 @@
 import "./Meeting-Block.css";
 import { FaRegKeyboard } from "react-icons/fa6";
 import { MdOutlineVideoCameraFront } from "react-icons/md";
-import { IconInput } from "../reusable-components/icon-input/icon-input";
-import { IconButton } from "../reusable-components/icon-button/Icon-Button";
+import { IconInput } from "../../reusable-components/icon-input/icon-input";
+import { IconButton } from "../../reusable-components/icon-button/Icon-Button";
+import { EnableButton } from "../../reusable-components/enable-button/enable-button";
 
 // for keyboard Icon in icon input
 
@@ -32,7 +33,7 @@ const Meeting_Block = () => {
           type={"text"}
         />
 
-        <button>Join</button>
+        <EnableButton text="Join" />
       </div>
 
       <p>

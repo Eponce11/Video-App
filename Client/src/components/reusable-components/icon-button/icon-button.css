@@ -8,6 +8,7 @@
   padding-left: 15px;
   padding-right: 20px;
   background-color: rgb(26, 115, 232);
+  white-space: nowrap;
 }
 
 .icon-button__wrap:hover {

@@ -7,7 +7,6 @@
 section {
   background-color: rgb(255, 255, 255);
   width: 520.859px;
-  height: 319px;
   background-color: rgb(238, 224, 224);
   color: black;
   font-family: sans-serif;
@@ -19,6 +18,7 @@ h2 {
   line-height: 3.25rem;
   color: var(--gm3-sys-color-on-surface, #1f1f1f);
   grid-column: 1/-1;
+  padding-bottom: 8px;
 }
 
 h3 {
@@ -28,28 +28,27 @@ h3 {
   line-height: 1.75rem;
   color: #626564;
   grid-column: 1/-1;
+  padding-bottom: 32px;
 }
 p {
   border-top: 1px;
   border-color: black;
   grid-column: 1/-1;
   border-top-style: solid;
-  margin-top: 40px;
+  padding-top: 18px;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.00625rem;
+  line-height: 1rem;
 }
 
 .Meeting-block__buttons {
   display: flex;
   gap: 1rem;
-}
-
-button {
-  background-color: rgb(26, 115, 232);
-  display: flex;
+  margin-bottom: 16px;
 }
 
 .learn-more {
   margin-right: 3px;
-}
-
-.new-meet {
 }
