@@ -1,0 +1,38 @@
+.icon-button__wrap {
+  border-radius: 2rem;
+  border: none;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 20px;
+  background-color: rgb(26, 115, 232);
+  white-space: nowrap;
+}
+
+.icon-button__wrap:hover {
+  background-color: rgb(50, 132, 239);
+  box-shadow: 0 2px 3px rgb(138, 138, 138);
+}
+.icon-button__wrap:focus {
+  background-color: rgb(74, 149, 247);
+}
+
+.icon-button__text {
+  padding-left: 10px;
+  color: var(
+    --gm3-button-filled-label-text-color,
+    var(--gm3-sys-color-on-primary, #fff)
+  );
+  font-size: var(--gm3-button-filled-label-text-size, 0.875rem);
+  font-family: var(
+    --gm3-button-filled-label-text-font,
+    "Google Sans",
+    Roboto,
+    Arial,
+    sans-serif
+  );
+  font-weight: var(--gm3-button-filled-label-text-weight, 500);
+  letter-spacing: var(--gm3-button-filled-label-text-tracking, 0);
+}

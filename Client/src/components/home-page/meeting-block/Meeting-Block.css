@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  background-color: rgb(255, 255, 255);
+  width: 520.859px;
+  background-color: rgb(238, 224, 224);
+  color: black;
+  font-family: sans-serif;
+}
+h2 {
+  font-size: 2.8125rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 3.25rem;
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
+  grid-column: 1/-1;
+  padding-bottom: 8px;
+}
+
+h3 {
+  font-size: 1.375rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.75rem;
+  color: #626564;
+  grid-column: 1/-1;
+  padding-bottom: 32px;
+}
+p {
+  border-top: 1px;
+  border-color: black;
+  grid-column: 1/-1;
+  border-top-style: solid;
+  padding-top: 18px;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.00625rem;
+  line-height: 1rem;
+}
+
+.Meeting-block__buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 16px;
+}
+
+.learn-more {
+  margin-right: 3px;
+}
