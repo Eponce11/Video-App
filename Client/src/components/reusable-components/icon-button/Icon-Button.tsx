@@ -1,8 +1,8 @@
 import "./icon-button.css";
 
 interface ButtonProps {
-  icon: any;
-  text: string;
+  icon?: any;
+  text?: string;
 }
 
 export function IconButton(props: ButtonProps) {
