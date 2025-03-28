@@ -1,10 +1,19 @@
 import express from "express";
+import cors from "cors";
 import http from "http";
 import { Server } from "socket.io";
 
 const app = express();
+const PORT = 8000;
+
+app.use(cors());
+
 const httpServer = http.createServer(app);
-const io = new Server(httpServer);
+const io = new Server(httpServer, {
+  cors: {
+    origin: ["http://localhost:5173"],
+  },
+});
 
 const rooms: any = {};
 
@@ -38,6 +47,6 @@ io.on("connection", (socket) => {
   });
 });
 
-app.listen(() => {
+httpServer.listen(PORT, () => {
   console.log(`Server is running`);
 });
