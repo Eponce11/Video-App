@@ -8,7 +8,6 @@
 .home-page-header__googlemeet {
   font: 13px / 27px Roboto, Arial, sans-serif;
   display: flex;
-  padding-left: 2%;
   width: 100%;
   color: black;
   font-weight: normal;
@@ -26,12 +25,11 @@
 .home-page-header__toolbar {
   display: flex;
   gap: 2%;
-  padding-right: 2%;
-  color: rgb(85, 85, 85);
-  justify-items: center;
+  color: rgb(110, 110, 110);
+  justify-content: right;
   align-items: center;
   white-space: nowrap;
-  gap: 5%;
   font-family: "Google Sans", Roboto, Arial, sans-serif;
-  font-size: 38px;
+  font-size: 24px;
+  size: 100%;
 }

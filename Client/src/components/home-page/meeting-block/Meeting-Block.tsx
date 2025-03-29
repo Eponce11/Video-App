@@ -36,7 +36,7 @@ const Meeting_Block = () => {
         <EnableButton text="Join" />
       </div>
 
-      <p>
+      <p className="meeting-block__learn-more">
         <a
           href="https://support.google.com/meet/?hl=en#topic=14074839"
           className="learn-more"

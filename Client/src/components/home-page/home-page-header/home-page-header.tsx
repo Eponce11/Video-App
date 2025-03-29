@@ -1,11 +1,12 @@
 import "./home-page-header.css";
 import { SiGooglemeet } from "react-icons/si";
-import { IconButton } from "../../reusable-components/icon-button/Icon-Button";
 import { VscReport } from "react-icons/vsc";
 import { IoSettings } from "react-icons/io5";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { CgLayoutGridSmall } from "react-icons/cg";
 import { GoQuestion } from "react-icons/go";
+import { Clock } from "../../reusable-components/clock/clock";
+import { HeaderButton } from "../../reusable-components/header-buttons/Header-buttons";
 
 const HomePageHeader = () => {
   return (
@@ -13,19 +14,25 @@ const HomePageHeader = () => {
       <div>
         <a href="#" className="home-page-header__googlemeet">
           <div className="home-page-header__camera">
-            <SiGooglemeet />
+            <SiGooglemeet color="#2684FC" />
           </div>
           <div className="home-page-header__googlemeet-text">Google Meet</div>
         </a>
       </div>
 
       <div className="home-page-header__toolbar">
-        <time>10:47</time>
-        <IconButton icon={<GoQuestion />} />
-        <IconButton icon={<VscReport />} />
-        <IconButton icon={<IoSettings />} />
-        <IconButton icon={<CgLayoutGridSmall />} />
-        <IconButton icon={<IoPersonCircleOutline />} />
+        <div>
+          <Clock />
+        </div>
+        <HeaderButton icon={<GoQuestion size={"24px"} strokeWidth={0.7} />} />
+        <HeaderButton icon={<VscReport size={"24px"} strokeWidth={0.3} />} />
+        <HeaderButton icon={<IoSettings size={"24px"} />} />
+        <HeaderButton
+          icon={<CgLayoutGridSmall size={"30px"} strokeWidth={0.7} />}
+        />
+        <HeaderButton
+          icon={<IoPersonCircleOutline size={"24px"} strokeWidth={10} />}
+        />
       </div>
     </header>
   );

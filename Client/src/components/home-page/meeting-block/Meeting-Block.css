@@ -7,7 +7,6 @@
 section {
   background-color: rgb(255, 255, 255);
   width: 520.859px;
-  background-color: rgb(238, 224, 224);
   color: black;
   font-family: sans-serif;
 }
@@ -30,7 +29,7 @@ h3 {
   grid-column: 1/-1;
   padding-bottom: 32px;
 }
-p {
+.meeting-block__learn-more {
   border-top: 1px;
   border-color: black;
   grid-column: 1/-1;
@@ -41,6 +40,7 @@ p {
   font-weight: 400;
   letter-spacing: 0.00625rem;
   line-height: 1rem;
+  color: rgb(119, 119, 119);
 }
 
 .Meeting-block__buttons {
@@ -51,4 +51,11 @@ p {
 
 .learn-more {
   margin-right: 3px;
+  color: #1a73e8;
+}
+
+.learn-more:active {
+  margin-right: 3px;
+  color: #1a73e8;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
 }
