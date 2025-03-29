@@ -26,8 +26,6 @@ io.on("connection", (socket) => {
       rooms[roomID] = [socket.id];
     }
 
-    console.log(rooms[roomID]);
-
     // notifies users when joining the room
     const otherUser = rooms[roomID].find((id: any) => id !== socket.id);
     if (otherUser) {
@@ -51,7 +49,7 @@ io.on("connection", (socket) => {
   socket.on("send-msg", (payload: any) => {
     const otherUser = rooms[payload.roomID].find((id: any) => id !== socket.id);
     if (otherUser) {
-      socket.to(otherUser).emit("msg-receive", { msg: payload.msg });
+      socket.to(otherUser).emit("msg-receive", payload.msg);
     }
   });
 });
