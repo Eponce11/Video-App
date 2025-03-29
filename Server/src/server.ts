@@ -19,8 +19,6 @@ const rooms: any = {};
 
 io.on("connection", (socket) => {
   // joins the room on connection or creates room if it doesn't exist
-
-  console.log(socket.id);
   socket.on("join room", (roomID: any) => {
     if (rooms[roomID]) {
       rooms[roomID].push(socket.id);
@@ -52,8 +50,6 @@ io.on("connection", (socket) => {
 
   socket.on("send-msg", (payload: any) => {
     const otherUser = rooms[payload.roomID].find((id: any) => id !== socket.id);
-    console.log({ ...payload, userID: socket.id, otherID: otherUser });
-    console.log(rooms[payload.roomID]);
     if (otherUser) {
       socket.to(otherUser).emit("msg-receive", { msg: payload.msg });
     }
@@ -61,5 +57,5 @@ io.on("connection", (socket) => {
 });
 
 httpServer.listen(PORT, () => {
-  console.log(`Server is running`);
+  console.log(`Server is running on port ${PORT}`);
 });

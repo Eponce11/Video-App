@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const MessageSidebar = (props: { socketRef: any }) => {
+interface MessageSidebarProps {
+  socketRef: any;
+}
+
+const MessageSidebar = (props: MessageSidebarProps) => {
   const { socketRef } = props;
 
   const [message, setMessage] = useState<string>("");
