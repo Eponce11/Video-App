@@ -19,12 +19,16 @@ const rooms: any = {};
 
 io.on("connection", (socket) => {
   // joins the room on connection or creates room if it doesn't exist
+
+  console.log(socket.id);
   socket.on("join room", (roomID: any) => {
     if (rooms[roomID]) {
       rooms[roomID].push(socket.id);
     } else {
       rooms[roomID] = [socket.id];
     }
+
+    console.log(rooms[roomID]);
 
     // notifies users when joining the room
     const otherUser = rooms[roomID].find((id: any) => id !== socket.id);
@@ -44,6 +48,15 @@ io.on("connection", (socket) => {
 
   socket.on("ice-candidate", (incoming: any) => {
     io.to(incoming.target).emit("ice-candidate", incoming.candidate);
+  });
+
+  socket.on("send-msg", (payload: any) => {
+    const otherUser = rooms[payload.roomID].find((id: any) => id !== socket.id);
+    console.log({ ...payload, userID: socket.id, otherID: otherUser });
+    console.log(rooms[payload.roomID]);
+    if (otherUser) {
+      socket.to(otherUser).emit("msg-receive", { msg: payload.msg });
+    }
   });
 });
 

@@ -1,14 +1,12 @@
 import { useRef, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { io } from "socket.io-client";
 
-const useLiveStream = () => {
+const useLiveStream = (socketRef: any) => {
   const { _roomID } = useParams();
 
   const userVideo = useRef<any>(null);
   const partnerVideo = useRef<any>(null);
   const peerRef = useRef<any>(null);
-  const socketRef = useRef<any>(null);
   const otherUser = useRef<any>(null);
   const userStream = useRef<any>(null);
 
@@ -20,7 +18,6 @@ const useLiveStream = () => {
         userVideo.current.srcObject = stream;
         userStream.current = stream;
 
-        socketRef.current = io("http://localhost:8000");
         socketRef.current.emit("join room", _roomID);
 
         socketRef.current.on("other user", (userID: any) => {
