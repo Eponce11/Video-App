@@ -59,3 +59,24 @@ h3 {
   color: #1a73e8;
   font-family: "Google Sans", Roboto, Arial, sans-serif;
 }
+
+.enable-button {
+  border-radius: 2rem;
+  border: none;
+  color: rgb(26, 115, 232);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgb(255, 255, 255);
+  pointer-events: none;
+}
+
+.enable-button:hover {
+  background-color: rgba(26, 115, 232, 0.253);
+}
+
+.enable-button:focus {
+  background-color: rgba(26, 115, 232, 0.452);
+}

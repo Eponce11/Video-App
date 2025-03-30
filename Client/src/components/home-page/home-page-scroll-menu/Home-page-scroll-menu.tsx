@@ -9,6 +9,8 @@ import { ScrollMenuContentBlocks } from "../../reusable-components/scroll-menu-c
 const ScrollMenu = () => {
   const [index, setIndex] = useState(0);
 
+  const [direction, setDirection] = useState(false);
+
   interface BoxProps {
     idx: number;
   }
@@ -26,11 +28,17 @@ const ScrollMenu = () => {
   }
 
   const changeScrollMenuContentBack = () => {
-    index === 0 ? setIndex(7) : setIndex(index - 1);
+    if (index === 0) {
+      setIndex(7);
+    } else {
+      setIndex(index - 1);
+    }
+    setDirection(false);
   };
 
   const changeScrollMenuContentFwd = () => {
     index === 7 ? setIndex(0) : setIndex(index + 1);
+    setDirection(true);
   };
 
   return (
@@ -44,7 +52,7 @@ const ScrollMenu = () => {
         </section>
 
         <section className="home-page-scroll-menu__content">
-          <ScrollMenuContent i={index} />
+          <ScrollMenuContent i={index} direction={direction} />
           <button className="scroll-menu-button__button">Start trial</button>
         </section>
 
