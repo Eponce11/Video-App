@@ -3,13 +3,20 @@ import "./header-buttons.css";
 interface ButtonProps {
   icon: any;
   onClick?: any;
+  href?: string;
 }
 
 export function HeaderButton(props: ButtonProps) {
-  const { icon, onClick } = props;
+  const { icon, onClick, href } = props;
   return (
-    <button onClick={onClick} className="headerButton__wrap">
+    <a
+      target="_blank"
+      href={href}
+      onClick={onClick}
+      className="headerButton__wrap"
+      rel="noopener noreferrer"
+    >
       {icon}
-    </button>
+    </a>
   );
 }

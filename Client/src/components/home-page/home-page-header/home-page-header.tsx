@@ -24,13 +24,23 @@ const HomePageHeader = () => {
         <div>
           <Clock />
         </div>
-        <HeaderButton icon={<GoQuestion size={"24px"} strokeWidth={0.7} />} />
-        <HeaderButton icon={<VscReport size={"24px"} strokeWidth={0.3} />} />
-        <HeaderButton icon={<IoSettings size={"24px"} />} />
+        <HeaderButton
+          href="https://support.google.com/meet/?hl=en#topic=14074839"
+          icon={<GoQuestion size={"24px"} strokeWidth={0.7} />}
+        />
+        <HeaderButton
+          href="https://support.google.com/websearch/answer/6223687?hl=en&co=GENIE.Platform%3DAndroid"
+          icon={<VscReport size={"24px"} strokeWidth={0.3} />}
+        />
+        <HeaderButton
+          href="https://support.google.com/accounts/answer/3118621?hl=en"
+          icon={<IoSettings size={"24px"} />}
+        />
         <HeaderButton
           icon={<CgLayoutGridSmall size={"30px"} strokeWidth={0.7} />}
         />
         <HeaderButton
+          href="https://myaccount.google.com/"
           icon={<IoPersonCircleOutline size={"24px"} strokeWidth={10} />}
         />
       </div>
