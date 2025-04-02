@@ -45,8 +45,15 @@ io.on("connection", (socket) => {
   socket.on("ice-candidate", (incoming: any) => {
     io.to(incoming.target).emit("ice-candidate", incoming.candidate);
   });
+
+  socket.on("send-msg", (payload: any) => {
+    const otherUser = rooms[payload.roomID].find((id: any) => id !== socket.id);
+    if (otherUser) {
+      socket.to(otherUser).emit("msg-receive", payload.msg);
+    }
+  });
 });
 
 httpServer.listen(PORT, () => {
-  console.log(`Server is running`);
+  console.log(`Server is running on port ${PORT}`);
 });
