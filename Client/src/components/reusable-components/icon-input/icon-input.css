@@ -36,15 +36,36 @@
   align-items: center;
 }
 
-.icon-input__joinButton {
+.icon-input__joinButtonDisabled {
   height: 50px;
   border-radius: 2rem;
   border: none;
-  color: rgb(26, 115, 232);
+  color: rgb(165, 165, 165);
   display: flex;
   align-items: center;
   justify-content: center;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: 1rem;
+}
+
+.icon-input__joinButtonEnabled {
+  height: 50px;
+  border-radius: 2rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 1rem;
+  color: rgb(26, 115, 232);
+}
+
+.icon-input__joinButtonEnabled:hover {
+  background-color: rgba(26, 115, 232, 0.185);
+}
+
+.icon-input__joinButtonEnabled:focus {
+  background-color: rgba(26, 115, 232, 0.418);
 }
