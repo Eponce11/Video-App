@@ -30,7 +30,7 @@ const Meeting_Block = () => {
           placeHolder={"Enter a Code Or Link"}
           type={"text"}
         />
-        <button className="enable-button">Join</button>
+        {/* <button className="enable-button">Join</button> */}
       </div>
 
       <p className="meeting-block__learn-more">

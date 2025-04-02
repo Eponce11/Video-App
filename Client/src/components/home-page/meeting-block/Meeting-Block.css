@@ -61,16 +61,6 @@ h3 {
 }
 
 .enable-button {
-  border-radius: 2rem;
-  border: none;
-  color: rgb(26, 115, 232);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: rgb(255, 255, 255);
-  pointer-events: none;
 }
 
 .enable-button:hover {

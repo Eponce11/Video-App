@@ -14,7 +14,7 @@ export const Clock = () => {
   const day = now.getDate();
 
   return (
-    <div>
+    <div className="clock-words">
       {hour}:{minute}
       {ampm} • {weekday} {month} {day}
     </div>
