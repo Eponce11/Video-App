@@ -33,6 +33,4 @@
     Arial,
     sans-serif
   );
-  font-weight: var(--gm3-button-filled-label-text-weight, 500);
-  letter-spacing: var(--gm3-button-filled-label-text-tracking, 0);
 }

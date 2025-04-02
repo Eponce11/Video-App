@@ -1,5 +1,6 @@
 import Meeting_Block from "../../components/home-page/meeting-block/Meeting-Block";
-import HomePageHeader from "../../components/home-page/home-page-header/home-page-header";
+import HomePageHeader from "../../components/home-page/home-page-header/Home-page-header";
+import ScrollMenu from "../../components/home-page/home-page-scroll-menu/Home-page-scroll-menu";
 import "./home.css";
 const Home = () => {
   return (
@@ -7,12 +8,15 @@ const Home = () => {
       <header className="home__header">
         <HomePageHeader />
       </header>
-      <article home__blocks-container>
+
+      <article className="home__blocks-container">
         <section className="home__meetingblock">
           <Meeting_Block />
         </section>
 
-        <section className="home__scrollmenublock"></section>
+        <section className="home__scrollmenublock">
+          <ScrollMenu />
+        </section>
       </article>
     </div>
   );

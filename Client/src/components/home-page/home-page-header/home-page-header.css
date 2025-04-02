@@ -1,9 +1,38 @@
 .home-page-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 
 .home-page-header__googlemeet {
   font: 13px / 27px Roboto, Arial, sans-serif;
+  display: flex;
+  width: 100%;
+  color: black;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: rgb(85, 85, 85);
+  justify-items: center;
+  align-items: center;
+  white-space: nowrap;
+  gap: 5%;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 38px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .home-page-header__toolbar {
+  display: flex;
+  gap: 2%;
+  color: rgb(110, 110, 110);
+  justify-content: right;
+  align-items: center;
+  white-space: nowrap;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 24px;
+  size: 100%;
 }

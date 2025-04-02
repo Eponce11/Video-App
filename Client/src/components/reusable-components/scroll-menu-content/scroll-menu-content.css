@@ -1,0 +1,26 @@
+.home-page-scroll-menu__h2 {
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  margin: 0;
+  text-size-adjust: 100%;
+  padding-bottom: 8px;
+}
+
+.home-page-scroll-menu__h3 {
+  font-family: Roboto, Arial, sans-serif;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.0142857143em;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+  text-size-adjust: 100%;
+}
+.home-page-scroll__menu-img1 {
+  width: 330px;
+  height: auto;
+}

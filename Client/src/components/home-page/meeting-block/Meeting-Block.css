@@ -7,9 +7,12 @@
 section {
   background-color: rgb(255, 255, 255);
   width: 520.859px;
-  background-color: rgb(238, 224, 224);
   color: black;
   font-family: sans-serif;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 h2 {
   font-size: 2.8125rem;
@@ -30,7 +33,7 @@ h3 {
   grid-column: 1/-1;
   padding-bottom: 32px;
 }
-p {
+.meeting-block__learn-more {
   border-top: 1px;
   border-color: black;
   grid-column: 1/-1;
@@ -41,6 +44,7 @@ p {
   font-weight: 400;
   letter-spacing: 0.00625rem;
   line-height: 1rem;
+  color: rgb(119, 119, 119);
 }
 
 .Meeting-block__buttons {
@@ -51,4 +55,22 @@ p {
 
 .learn-more {
   margin-right: 3px;
+  color: #1a73e8;
+}
+
+.learn-more:active {
+  margin-right: 3px;
+  color: #1a73e8;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+}
+
+.enable-button {
+}
+
+.enable-button:hover {
+  background-color: rgba(26, 115, 232, 0.253);
+}
+
+.enable-button:focus {
+  background-color: rgba(26, 115, 232, 0.452);
 }

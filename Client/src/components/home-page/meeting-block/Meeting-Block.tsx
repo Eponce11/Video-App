@@ -3,7 +3,6 @@ import { FaRegKeyboard } from "react-icons/fa6";
 import { MdOutlineVideoCameraFront } from "react-icons/md";
 import { IconInput } from "../../reusable-components/icon-input/icon-input";
 import { IconButton } from "../../reusable-components/icon-button/Icon-Button";
-import { EnableButton } from "../../reusable-components/enable-button/enable-button";
 
 // for keyboard Icon in icon input
 
@@ -20,7 +19,6 @@ const Meeting_Block = () => {
           icon={<MdOutlineVideoCameraFront size={"20px"} />}
           text={"New Meeting"}
         />
-
         <IconInput
           children={
             <FaRegKeyboard
@@ -32,11 +30,10 @@ const Meeting_Block = () => {
           placeHolder={"Enter a Code Or Link"}
           type={"text"}
         />
-
-        <EnableButton text="Join" />
+        {/* <button className="enable-button">Join</button> */}
       </div>
 
-      <p>
+      <p className="meeting-block__learn-more">
         <a
           href="https://support.google.com/meet/?hl=en#topic=14074839"
           className="learn-more"

@@ -1,0 +1,16 @@
+.headerButton__wrap {
+  border: none;
+  box-shadow: none;
+  background: rgba(218, 220, 224, 0);
+  border-radius: 4rem;
+  padding: 12px;
+  color: #5f6368;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerButton__wrap:hover {
+  background-color: rgba(153, 153, 153, 0.137);
+  border: none;
+}
