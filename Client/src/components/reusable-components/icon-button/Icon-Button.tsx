@@ -4,13 +4,14 @@ import "./icon-button.css";
 interface ButtonProps {
   icon?: any;
   text?: string;
+  onCLick: any;
 }
 
 export function IconButton(props: ButtonProps) {
-  const { icon, text } = props;
+  const { icon, text, onCLick } = props;
   const [isdisabled, setIsDisabled] = useState(true);
   return (
-    <button className="icon-button__wrap">
+    <button onClick={onCLick} className="icon-button__wrap">
       {icon}
       <div className="icon-button__text">{text}</div>
       {isdisabled ? (

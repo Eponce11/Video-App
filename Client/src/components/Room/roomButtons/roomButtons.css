@@ -1,0 +1,122 @@
+.roomButtonsWrap {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #131314;
+  padding: 0px 2%;
+}
+
+.roomButtonsSections1 {
+  background-color: #131314;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 282px;
+  height: 48px;
+}
+
+.roomButtonsSections2 {
+  background-color: #131314;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.roomButtonsSections3 {
+  background-color: #131314;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 282px;
+}
+
+.currentTime {
+  display: flex;
+  background-color: #131314;
+  color: white;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.00625em;
+  font-weight: 500;
+  user-select: text;
+  align-items: center;
+}
+
+.roomButton1 {
+  border: none;
+  box-shadow: none;
+  background-color: #414345;
+  border-radius: 4rem;
+  padding: 12px;
+  color: #ffffff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 7px 20px 7px 20px;
+}
+
+.roomButton1:hover {
+  background-color: rgb(77, 78, 80);
+  border: none;
+}
+
+.roomButton2 {
+  border: none;
+  box-shadow: none;
+  background-color: #414345;
+  border-radius: 4rem;
+  padding: 12px;
+  color: #ffffff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 7px 10px 7px 10px;
+}
+
+.roomButton2:hover {
+  background-color: rgb(77, 78, 80);
+  border: none;
+}
+
+.roomButton3 {
+  border: none;
+  box-shadow: none;
+  background-color: #41434517;
+  border-radius: 4rem;
+  padding: 12px;
+  color: #ffffff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+  padding: 7px;
+}
+
+.roomButton3:hover {
+  background-color: rgba(117, 119, 122, 0.377);
+  border: none;
+}
+
+.leaveCall {
+  border: none;
+  box-shadow: none;
+  background-color: #b63a34;
+  border-radius: 4rem;
+  padding: 12px;
+  color: #ffffff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 7px 20px 7px 20px;
+}
+
+.leaveCall:hover {
+  background-color: #df463e;
+  border: none;
+}

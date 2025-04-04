@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "./messageSideBar.css";
+import { BiSend } from "react-icons/bi";
+import { motion } from "motion/react";
 
 interface MessageSidebarProps {
   socketRef: any;
@@ -44,22 +47,35 @@ const MessageSidebar = (props: MessageSidebarProps) => {
   };
 
   return (
-    <div>
-      {messages.map((message: Message) => {
-        return (
-          <p>
-            {message.isMe ? "Me" : "Other"}: {message.msg}
-          </p>
-        );
-      })}
-
-      <input
-        type="text"
-        onChange={(e: any) => setText(e.target.value)}
-        value={text}
-      />
-      <button onClick={handleSendMessage}>Send Message</button>
-    </div>
+    <motion.div
+      initial={{ x: 50, opacity: 0 }}
+      animate={{ x: 0, opacity: 100 }}
+      transition={{ duration: 0.5 }}
+      className="messageSidebarWrap"
+    >
+      <h3 className="mSBH3">In-call messages</h3>
+      <div className="messagesSidebarMsgs">
+        {messages.map((message: Message) => {
+          return (
+            <p>
+              {message.isMe ? "Me" : "Other"}: {message.msg}
+            </p>
+          );
+        })}
+      </div>
+      <div className="messageSidebarFooter">
+        <input
+          className="msgSBButInput"
+          type="text"
+          onChange={(e: any) => setText(e.target.value)}
+          value={text}
+          placeholder="Send a message"
+        />
+        <button className="msgSBButton" onClick={handleSendMessage}>
+          <BiSend size={"24px"} />
+        </button>
+      </div>
+    </motion.div>
   );
 };
 

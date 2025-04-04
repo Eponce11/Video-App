@@ -1,0 +1,18 @@
+.RoomButton1 {
+  border: none;
+  box-shadow: none;
+  background-color: #414345;
+  border-radius: 4rem;
+  padding: 12px;
+  color: #ffffff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 7px 20px 7px 20px;
+}
+
+.RoomButton1:hover {
+  background-color: rgb(77, 78, 80);
+  border: none;
+}
