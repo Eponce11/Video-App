@@ -11,7 +11,7 @@ import { MdOutlinePeopleAlt } from "react-icons/md";
 import { MdMessage } from "react-icons/md";
 import { BsGrid3X3GapFill } from "react-icons/bs";
 import { MdOutlineLockPerson } from "react-icons/md";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsMicMute } from "react-icons/bs";
 import { BsFillMicFill } from "react-icons/bs";
 import { BsFillCameraVideoFill } from "react-icons/bs";
@@ -30,12 +30,31 @@ const RoomButtons = (props: roomButtonsProps) => {
 
   const [micDisabled, setMicDisabled] = useState(false);
   const [vidDisabled, setVidDisabled] = useState(false);
+  const [emoteBarDisabled, setEmoteBarDisabled] = useState(false);
+
+  function TemporaryDiv(g: any) {
+    const [isVisible, setIsVisible] = useState(true);
+    const durration = 3000;
+
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+      }, durration);
+
+      return () => clearTimeout(timer);
+    }, [durration]);
+
+    return isVisible ? <div>g.innerHTML</div> : null;
+  }
 
   function micDisabledFunc() {
     setMicDisabled(!micDisabled);
   }
   function vidDisabledFunc() {
     setVidDisabled(!vidDisabled);
+  }
+  function emoteBarDisabledFunc() {
+    setEmoteBarDisabled(!emoteBarDisabled);
   }
   return (
     <div className="roomButtonsWrap">
@@ -69,9 +88,25 @@ const RoomButtons = (props: roomButtonsProps) => {
         <button className="roomButton1">
           <FaRegClosedCaptioning size={"24px"} />
         </button>
-        <button className="roomButton1">
-          <VscSmiley size={"24px"} />
-        </button>
+        <div>
+          <button onClick={emoteBarDisabledFunc} className="roomButton1">
+            <VscSmiley size={"24px"} />
+          </button>
+          {emoteBarDisabled ? null : (
+            <div className="emoteBar">
+              <button className="roomButton3">&#128512;</button>
+              <button className="roomButton3">&#128513;</button>
+              <button className="roomButton3">&#128514;</button>
+              <button className="roomButton3"> &#128515;</button>
+              <button className="roomButton3">&#128516;</button>
+              <button className="roomButton3">&#128517;</button>
+              <button className="roomButton3"> &#128511;</button>
+              <button className="roomButton3">&#128509;</button>
+              <button className="roomButton3">&#128508;</button>
+              <button className="roomButton3">&#129421;</button>
+            </div>
+          )}
+        </div>
         <button className="roomButton1">
           <TbSquareRoundedArrowUp size={"24px"} />
         </button>
@@ -81,9 +116,9 @@ const RoomButtons = (props: roomButtonsProps) => {
         <button className="roomButton2">
           <BsThreeDotsVertical size={"24px"} />
         </button>
-        <button className="leaveCall">
+        <a href="/" className="leaveCall">
           <MdCallEnd size={"24px"} />
-        </button>
+        </a>
       </section>
 
       <section className="roomButtonsSections3">

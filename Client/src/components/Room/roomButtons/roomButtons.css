@@ -95,6 +95,7 @@
   height: 48px;
   width: 48px;
   padding: 7px;
+  font-size: 24px;
 }
 
 .roomButton3:hover {
@@ -119,4 +120,17 @@
 .leaveCall:hover {
   background-color: #df463e;
   border: none;
+}
+
+.emoteBar {
+  width: 35rem;
+  height: 3rem;
+  position: absolute;
+  transform: translate(-14rem, -7rem);
+  background-color: #41434517;
+  border-radius: 4rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
 }

@@ -6,7 +6,7 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 import { CgLayoutGridSmall } from "react-icons/cg";
 import { GoQuestion } from "react-icons/go";
 import { Clock } from "../../reusable-components/clock/clock";
-import { HeaderButton } from "../../reusable-components/header-buttons/Header-buttons";
+import { HeaderButton } from "../../reusable-components/header-buttons/header-buttons";
 
 const HomePageHeader = () => {
   return (

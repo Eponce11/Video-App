@@ -7,8 +7,8 @@ import RoomButtons from "../../components/Room/roomButtons/roomButtons";
 const Room = () => {
   const socketRef = useRef<any>(null);
   socketRef.current = io("http://localhost:8000");
-  const [chatShut, setChatShut] = useState(true);
 
+  const [chatShut, setChatShut] = useState(true);
   function setChatBlock() {
     {
       chatShut ? setChatShut(false) : setChatShut(true);
