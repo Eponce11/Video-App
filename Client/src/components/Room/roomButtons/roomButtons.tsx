@@ -11,11 +11,18 @@ import { MdOutlinePeopleAlt } from "react-icons/md";
 import { MdMessage } from "react-icons/md";
 import { BsGrid3X3GapFill } from "react-icons/bs";
 import { MdOutlineLockPerson } from "react-icons/md";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { BsMicMute } from "react-icons/bs";
 import { BsFillMicFill } from "react-icons/bs";
 import { BsFillCameraVideoFill } from "react-icons/bs";
 import { BsFillCameraVideoOffFill } from "react-icons/bs";
+import EmoteButton from "../../reusable-components/emoteButton/emoteButton";
+import { MdFullscreen } from "react-icons/md";
+import { VscReport } from "react-icons/vsc";
+import { MdOutlineReportGmailerrorred } from "react-icons/md";
+import { MdTroubleshoot } from "react-icons/md";
+import { MdOutlineSettings } from "react-icons/md";
+import { PiHandPalmLight } from "react-icons/pi";
 
 interface roomButtonsProps {
   chatButtonOnClick: any;
@@ -30,22 +37,9 @@ const RoomButtons = (props: roomButtonsProps) => {
 
   const [micDisabled, setMicDisabled] = useState(false);
   const [vidDisabled, setVidDisabled] = useState(false);
-  const [emoteBarDisabled, setEmoteBarDisabled] = useState(false);
-
-  function TemporaryDiv(g: any) {
-    const [isVisible, setIsVisible] = useState(true);
-    const durration = 3000;
-
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        setIsVisible(false);
-      }, durration);
-
-      return () => clearTimeout(timer);
-    }, [durration]);
-
-    return isVisible ? <div>g.innerHTML</div> : null;
-  }
+  const [emoteBarDisabled, setEmoteBarDisabled] = useState(true);
+  const [handUpDisabled, setHandUpDisabled] = useState(true);
+  const [threeDotsDisabled, setThreeDotsDisabled] = useState(true);
 
   function micDisabledFunc() {
     setMicDisabled(!micDisabled);
@@ -55,6 +49,12 @@ const RoomButtons = (props: roomButtonsProps) => {
   }
   function emoteBarDisabledFunc() {
     setEmoteBarDisabled(!emoteBarDisabled);
+  }
+  function threeDotsDisabledFunc() {
+    setThreeDotsDisabled(!threeDotsDisabled);
+  }
+  function handUpDisabledFunc() {
+    setHandUpDisabled(!handUpDisabled);
   }
   return (
     <div className="roomButtonsWrap">
@@ -94,28 +94,62 @@ const RoomButtons = (props: roomButtonsProps) => {
           </button>
           {emoteBarDisabled ? null : (
             <div className="emoteBar">
-              <button className="roomButton3">&#128512;</button>
-              <button className="roomButton3">&#128513;</button>
-              <button className="roomButton3">&#128514;</button>
-              <button className="roomButton3"> &#128515;</button>
-              <button className="roomButton3">&#128516;</button>
-              <button className="roomButton3">&#128517;</button>
-              <button className="roomButton3"> &#128511;</button>
-              <button className="roomButton3">&#128509;</button>
-              <button className="roomButton3">&#128508;</button>
-              <button className="roomButton3">&#129421;</button>
+              <EmoteButton emote="&#128512;" />
+              <EmoteButton emote="&#128513;" />
+              <EmoteButton emote="&#128514;" />
+              <EmoteButton emote="&#128515;" />
+              <EmoteButton emote="&#128516;" />
+              <EmoteButton emote="&#128517;" />
+              <EmoteButton emote="&#128511;" />
+              <EmoteButton emote="&#128509;" />
+              <EmoteButton emote="&#128508;" />
+              <EmoteButton emote="&#129421;" />
             </div>
           )}
         </div>
         <button className="roomButton1">
           <TbSquareRoundedArrowUp size={"24px"} />
         </button>
-        <button className="roomButton1">
+        <button onClick={handUpDisabledFunc} className="roomButton1">
           <TfiHandOpen size={"24px"} />
         </button>
-        <button className="roomButton2">
+        {handUpDisabled ? null : (
+          <div className="handUpBlock">
+            <PiHandPalmLight />
+            Me
+          </div>
+        )}
+        <button onClick={threeDotsDisabledFunc} className="roomButton2">
           <BsThreeDotsVertical size={"24px"} />
         </button>
+        {threeDotsDisabled ? null : (
+          <div className="threeDotsMenu">
+            <button className="roomButton4">
+              <MdFullscreen size={"30px"} /> Full Screen
+            </button>
+            <a
+              href="https://support.google.com/websearch/answer/6223687?hl=en&co=GENIE.Platform%3DAndroid"
+              className="roomButton4"
+            >
+              <VscReport size={"24px"} /> Report a Problem
+            </a>
+            <a
+              href="https://support.google.com/legal/answer/2463296?hl=en"
+              className="roomButton4"
+            >
+              <MdOutlineReportGmailerrorred size={"24px"} /> Report Abuse
+            </a>
+            <a href="https://support.google.com/" className="roomButton4">
+              <MdTroubleshoot size={"24px"} /> Trouble Shooting & Help
+            </a>
+            <a
+              href="https://support.google.com/accounts/answer/3118621?hl=en"
+              className="roomButton4"
+            >
+              <MdOutlineSettings size={"24px"} /> Settings
+            </a>
+          </div>
+        )}
         <a href="/" className="leaveCall">
           <MdCallEnd size={"24px"} />
         </a>

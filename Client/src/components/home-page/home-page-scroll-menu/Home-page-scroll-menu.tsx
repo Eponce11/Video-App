@@ -1,4 +1,4 @@
-import { HeaderButton } from "../../reusable-components/header-buttons/Header-buttons";
+import { HeaderButton } from "../../reusable-components/header-buttons/header-buttons";
 import "./home-page-scroll-menu.css";
 import { RiArrowDropLeftLine } from "react-icons/ri";
 import { RiArrowDropRightLine } from "react-icons/ri";
