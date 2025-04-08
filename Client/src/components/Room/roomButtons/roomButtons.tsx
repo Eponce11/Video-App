@@ -23,6 +23,8 @@ import { MdOutlineReportGmailerrorred } from "react-icons/md";
 import { MdTroubleshoot } from "react-icons/md";
 import { MdOutlineSettings } from "react-icons/md";
 import { PiHandPalmLight } from "react-icons/pi";
+import { motion } from "motion/react";
+import { IoCopyOutline } from "react-icons/io5";
 
 interface roomButtonsProps {
   chatButtonOnClick: any;
@@ -34,12 +36,22 @@ const RoomButtons = (props: roomButtonsProps) => {
   const hour = (now.getHours() % 12 || 12).toString().padStart(2, "0");
   const minute = now.getMinutes().toString().padStart(2, "0");
   const ampm = now.getHours() < 12 ? "AM" : "PM";
+  const code = window.location.href.substring(27);
 
   const [micDisabled, setMicDisabled] = useState(false);
   const [vidDisabled, setVidDisabled] = useState(false);
   const [emoteBarDisabled, setEmoteBarDisabled] = useState(true);
   const [handUpDisabled, setHandUpDisabled] = useState(true);
   const [threeDotsDisabled, setThreeDotsDisabled] = useState(true);
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      console.log("Text copied to clipboard");
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
+  };
 
   function micDisabledFunc() {
     setMicDisabled(!micDisabled);
@@ -60,7 +72,10 @@ const RoomButtons = (props: roomButtonsProps) => {
     <div className="roomButtonsWrap">
       <section className="roomButtonsSections1">
         <div className="currentTime">
-          {hour}:{minute} {ampm}
+          {hour}:{minute} {ampm} | {code}
+          <button onClick={copyToClipboard} className="roomButton3">
+            <IoCopyOutline size={"24px"} />
+          </button>
         </div>
       </section>
 
@@ -114,16 +129,26 @@ const RoomButtons = (props: roomButtonsProps) => {
           <TfiHandOpen size={"24px"} />
         </button>
         {handUpDisabled ? null : (
-          <div className="handUpBlock">
+          <motion.div
+            initial={{ y: -50, x: -650 }}
+            animate={{ y: -50, x: -670 }}
+            transition={{ duration: 0.2 }}
+            className="handUpBlock"
+          >
             <PiHandPalmLight />
             Me
-          </div>
+          </motion.div>
         )}
         <button onClick={threeDotsDisabledFunc} className="roomButton2">
           <BsThreeDotsVertical size={"24px"} />
         </button>
         {threeDotsDisabled ? null : (
-          <div className="threeDotsMenu">
+          <motion.div
+            initial={{ y: -160, x: 440 }}
+            animate={{ y: -170, x: 450 }}
+            transition={{ duration: 0.2 }}
+            className="threeDotsMenu"
+          >
             <button className="roomButton4">
               <MdFullscreen size={"30px"} /> Full Screen
             </button>
@@ -148,7 +173,7 @@ const RoomButtons = (props: roomButtonsProps) => {
             >
               <MdOutlineSettings size={"24px"} /> Settings
             </a>
-          </div>
+          </motion.div>
         )}
         <a href="/" className="leaveCall">
           <MdCallEnd size={"24px"} />

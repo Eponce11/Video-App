@@ -9,7 +9,15 @@ const VideoStreamView = (props: VideoStreamViewProps) => {
 
   const [userVideo, partnerVideo] = useLiveStream(socketRef);
   return (
-    <div>
+    <div
+      style={{
+        height: "100%",
+        width: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <video autoPlay ref={userVideo} />
       {partnerVideo.current !== null ? (
         <video autoPlay ref={partnerVideo} />

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./icon-input.css";
+import { useNavigate } from "react-router";
 
 interface IconProps {
   children: any;
@@ -20,6 +21,11 @@ export function IconInput(props: IconProps) {
       setIsDisabled(false);
     }
   }
+  const navigate = useNavigate();
+
+  const redirectToOtherPage = () => {
+    navigate("/room/" + inputValue);
+  };
 
   return (
     <div className="icon-input__wrap">
@@ -34,7 +40,12 @@ export function IconInput(props: IconProps) {
       {isdisabled ? (
         <a className="icon-input__joinButtonDisabled">Join</a>
       ) : (
-        <a className="icon-input__joinButtonEnabled">Join</a>
+        <a
+          onClick={redirectToOtherPage}
+          className="icon-input__joinButtonEnabled"
+        >
+          Join
+        </a>
       )}
     </div>
   );
