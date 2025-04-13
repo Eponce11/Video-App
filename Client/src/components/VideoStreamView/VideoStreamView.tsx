@@ -19,9 +19,7 @@ const VideoStreamView = (props: VideoStreamViewProps) => {
       }}
     >
       <video autoPlay ref={userVideo} />
-      {partnerVideo.current !== null ? (
-        <video autoPlay ref={partnerVideo} />
-      ) : null}
+      <video autoPlay ref={partnerVideo} />
     </div>
   );
 };

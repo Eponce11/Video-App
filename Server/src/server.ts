@@ -25,7 +25,7 @@ io.on("connection", (socket) => {
     } else {
       rooms[roomID] = [socket.id];
     }
-
+console.log(socket.id)
     // notifies users when joining the room
     const otherUser = rooms[roomID].find((id: any) => id !== socket.id);
     if (otherUser) {
