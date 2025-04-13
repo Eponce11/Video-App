@@ -1,5 +1,5 @@
 import Meeting_Block from "../../components/home-page/meeting-block/Meeting-Block";
-import HomePageHeader from "../../components/home-page/home-page-header/Home-page-header";
+import HomePageHeader from "../../components/home-page/home-page-header/home-page-header";
 import ScrollMenu from "../../components/home-page/home-page-scroll-menu/Home-page-scroll-menu";
 import "./home.css";
 const Home = () => {

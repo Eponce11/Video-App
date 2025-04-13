@@ -1,0 +1,75 @@
+.messageSidebarWrap {
+  border-radius: 1rem;
+  margin-right: 50px;
+  background-color: rgb(255, 255, 255);
+  height: 85%;
+  width: 300px;
+  position: relative;
+}
+
+.mSBH3 {
+  font-family: var(
+    --gm3-text-field-outlined-input-text-font,
+    "Google Sans",
+    Roboto,
+    Arial,
+    sans-serif
+  );
+  margin: 25px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.messagesSidebarMsgs {
+  padding-left: 30px;
+  font-family: var(
+    --gm3-text-field-outlined-input-text-font,
+    "Google Sans",
+    Roboto,
+    Arial,
+    sans-serif
+  );
+  line-height: var(--gm3-text-field-outlined-input-text-line-height, 1.5rem);
+  font-size: var(--gm3-text-field-outlined-input-text-size, 1rem);
+  letter-spacing: var(--gm3-text-field-outlined-input-text-tracking, 0);
+  font-weight: var(--gm3-text-field-outlined-input-text-weight, 400);
+}
+
+.messageSidebarFooter {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 2%;
+  position: absolute;
+  height: 48px;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.msgSBButton {
+  color: rgb(175, 170, 170);
+  width: 48px;
+  border: none;
+  height: 100%;
+  border-radius: 0 2rem 2rem 0;
+}
+
+.msgSBButInput {
+  border-radius: 2rem 0 0 2rem;
+  color: rgb(175, 170, 170);
+  border: none;
+  background-color: #f1f3f4;
+  text-align: center;
+  font-family: var(
+    --gm3-text-field-outlined-input-text-font,
+    "Google Sans",
+    Roboto,
+    Arial,
+    sans-serif
+  );
+  line-height: var(--gm3-text-field-outlined-input-text-line-height, 1.5rem);
+  font-size: var(--gm3-text-field-outlined-input-text-size, 1rem);
+  letter-spacing: var(--gm3-text-field-outlined-input-text-tracking, 0);
+  font-weight: var(--gm3-text-field-outlined-input-text-weight, 400);
+  height: 100%;
+}

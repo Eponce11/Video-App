@@ -1,0 +1,29 @@
+.roomWrap {
+  width: 100%;
+  height: 100vh;
+  background-color: #131314;
+}
+
+.vidMsgWrap {
+  background-color: #131314;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+
+.roomVideoWrap {
+  background-color: #131314;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+
+.roomMessageSidebar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
