@@ -1,12 +1,11 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import "./room.css";
-import { io } from "socket.io-client";
 import VideoStreamView from "../../components/VideoStreamView/VideoStreamView";
 import MessageSidebar from "../../components/MessageSidebar/MessageSidebar";
 import RoomButtons from "../../components/Room/roomButtons/roomButtons";
-const Room = () => {
-  const socketRef = useRef<any>(null);
-  socketRef.current = io("http://localhost:8000");
+const Room = (props: { socketRef: any }) => {
+  const { socketRef } = props;
+
   const [chatShut, setChatShut] = useState(true);
 
   function setChatBlock() {
